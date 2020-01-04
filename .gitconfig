@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Vitaly Shvedchenko
+	email = vitaly.shvedchenko@gmail.com
+[color]
+  ui = true
+[core]
+  pager = less -Xr
