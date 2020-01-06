@@ -1,6 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ZSH="/Users/vshvedchenko/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="steeef"
 
@@ -10,7 +10,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
 # +++++++++++++++++++++++++++++
@@ -21,12 +20,12 @@ alias ..="cd .."
 alias ws="cd ~/workspace"
 alias ll="ls -lah"
 alias pgp="pgp2"
+alias vim="nvim"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export GOPATH=$HOME/go
-
 export PATH=$PATH:$GOPATH/bin
 
 export PATH=$PATH:~/.cargo/bin
@@ -35,7 +34,7 @@ export TMPDIR=/tmp
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby ruby-2.6.3
+chruby ruby-2.7.0
 
 export GREP_COLOR='1;33'
 

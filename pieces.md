@@ -1,0 +1,95 @@
+24.2.4. Отказ от программирования
+Программирование дорого и непредсказуемо по сравнению со многими другими видами деятельности, и полученная программа часто не на 100% надежна. Программирование трудоемко, и — по многим причинам — многие серьезные проекты задерживаются из-за неготовности кода. Так почему бы программирование как род деятельности совсем не устранить из процесса? Бьерн Страуструп, Язык программирования С++ (Третье издание
+
+Greatest books:
+* High performance browser networking. Ilya Gorelik
+* Computer systems from programmers perspective
+* Grokking algorythms
+* Concurrency in go. Katherina Buduray Cox
+* The Imposter's Handbook. Rob conery
+* Linux programming interface
+* Business model generation Osterwalder & Pigneur
+
+https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html 
+https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/ 
+
+git log --all --grep='<pattern>' | ack '^commit\s+'
+
+curl -u 73ea6362d09a90a6db650f3e9aedf6ae90626a7e5630f2eb49d582ba: -H "Content-Type: application/json" -X POST -d '{"format": "csv", "type": "leads", "send_done_email": false }' https://close.io/api/v1/export/lead/
+
+curl -XPOST -H "Content-Type: application/json" -d '{"contact":{"Email":"hi.bye@some.thing"}}' https://api2.autopilothq.com/v1/contac
+
+curl -v -H 'Content-Type: application/json' -- 'https://example.com/?asdf=asdf' | jq '.results[] | {id: .id, title: .title}'
+
+openssl enc -aes-256-cbc -pbkdf2 -in un_encrypted.data -out encrypted.data
+openssl enc -d -aes-256-cbc -pbkdf2 -in encrypted.data -out un_encrypted.data
+
+sudo chown -R $USER:$GROUP ~/some-file
+
+gpg --list-keys
+gpg -e -u "Sender User Name" -r "Receiver User Name" somefile
+gpg -d mydata.tar.gpg
+
+grep -R "regex" some/folder
+
+arr.group_by { |x| x }.map { |element, matches| [ element, matches.length ] }.to_h
+
+du -hs .
+du -hs /* | sort -rh | head
+
+hexdump -C /dev/urandom
+
+:%!xxd
+
+pngquant **.png --ext .png --force
+
+LC_CTYPE="C.UTF-8" ssh to somewhere
+
+ssh -R2001:localhost:143  remote.host.net
+ssh -L2001:remote.net:143 remote.net
+
+find . -name "*.ext"
+
+rename
+find . -name "*.ua.yml" -exec rename -v 's/\.ua\.yml$/\.uk\.yml/i' {} \;
+find . -name '*.txt' -print0 | xargs -0 sed -i "" "s/oldword/newword/g"
+find dir -name '*.rb' -type f -exec sed -i -e 's/regex/replacement/g' -- {} +
+
+Constant       O(1)
+Logarithmic    O(log N)
+Linear         O(N)
+Linearithmic   O(N log N)
+Polynomial     O(N ^ 2)
+Exponential    O(2 ^ N)
+Factorial      O(N!)
+
+SQL
+
+See how much space your tables (and indexes!) are taking up space
+SELECT
+relname AS table_name,
+pg_size_pretty(pg_total_relation_size(relid)) AS total,
+pg_size_pretty(pg_relation_size(relid)) AS internal,
+pg_size_pretty(pg_table_size(relid) - pg_relation_size(relid)) AS external,
+pg_size_pretty(pg_indexes_size(relid)) AS indexes
+FROM pg_catalog.pg_statio_user_tables ORDER BY pg_total_relation_size(relid) DESC;
+
+select distinct(s.billing_account_id) 
+from phase_switches ps
+inner join subscriptions s
+on s.id = ps.subscription_id
+where exists 
+  (select subscription_id 
+  from phase_switches 
+  where created_at between {{from}} and {{to}} 
+  and phase_id = {{phase_id}}::uuid
+  and subscription_id = ps.subscription_id)
+and ps.created_at between {{from}} and {{to}} 
+and ps.phase_id = {{phase_id}}::uuid;
+
+Alghorytms to grokk
+- [ ] Bloom filter
+- [x] Fourier transform
+- [ ] Hyperlog
+- [ ] Linear programming и Simplex algorithm
+- [ ] Diffie-Hellman

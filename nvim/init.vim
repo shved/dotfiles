@@ -1,47 +1,29 @@
+set nocompatible
+
 " ===========================================================
-" ====================== VUNDLE STUFF =======================
+" ====================== VIM-PLUG STUFF =======================
 " ===========================================================
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'itchyny/lightline.vim'
-Plugin 'godlygeek/csapprox'
-Plugin 'tpope/vim-git'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
-Plugin 'junegunn/fzf'
-Plugin 'rking/ag.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-scripts/ReplaceWithRegister'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'fatih/vim-go'
-Plugin 'Shougo/neocomplete.vim'
-" Plugin 'tpope/vim-fugitive'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" ======================= neocomplete =======================
-
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+call plug#begin(stdpath('data') . '/plugged')
+  Plug 'scrooloose/nerdtree'
+  Plug 'itchyny/lightline.vim'
+  Plug 'godlygeek/csapprox'
+  Plug 'tpope/vim-git'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'JazzCore/ctrlp-cmatcher'
+  Plug 'junegunn/fzf'
+  Plug 'rking/ag.vim'
+  Plug 'xolox/vim-misc'
+  Plug 'xolox/vim-session'
+  Plug 'nelstrom/vim-visual-star-search'
+  Plug 'tomtom/tcomment_vim'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'vim-scripts/ReplaceWithRegister'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'fatih/vim-go'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
 
 " ======================= ctrlp stuff ========================
 
@@ -87,18 +69,20 @@ set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
-set wildignore+=vendor/rails/**
-set wildignore+=vendor/cache/**
+set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.out,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+set wildignore+=*.swp,*~,._*
 
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
 set sidescroll=1
+set sidescrolloff=15
 
 " ================ Search ===========================
 
@@ -127,14 +111,11 @@ let g:yankring_history_file = '.yankring-history'
 
 set noswapfile
 set nobackup
+set nowritebackup
 set nowb
 
-autocmd BufRead,BufNewFile *.arb setfiletype ruby
 
-autocmd FileType ruby setlocal ts=2 sts=2 sw=2
-autocmd FileType go setlocal ts=4 sts=4 sw=4
-" au FileType go setlocal omnifunc=go#complete#GocodeComplete
-
+" =================== Appearance ====================
 colorscheme pencil
 set background=dark
 let g:pencil_gutter_color = 1
@@ -149,8 +130,6 @@ let g:lightline = {
 function! LightLineFilename()
   return expand('%')
 endfunction
-
-set shell=/usr/local/bin/zsh
 
 hi search cterm=none ctermfg=yellow ctermbg=brown
 
@@ -179,10 +158,8 @@ let g:NERDTreeWinSize=44
 " some stuff to get the mouse going in term
 set mouse=a
 set clipboard+=unnamed
-set paste
-set ttymouse=xterm2
 
-set listchars=tab:>–,trail:~,extends:>,precedes:<
+set listchars=tab:>–,trail:~,extends:>,precedes:<,nbsp:+
 set list
 
 set number                      "Line numbers are good
@@ -224,7 +201,7 @@ vmap td <Esc>:execute ':tabclose'<CR>
 " keep cursor position after yanking
 vmap y y`]
 
-" set cmdheight=1
+set cmdheight=2
 
 set incsearch "find the next match as we type the search
 
@@ -234,7 +211,8 @@ set textwidth=80
 
 set pastetoggle=<F10>
 
-set wrap
+set wrap linebreak
+set showbreak=" "
 
 set textwidth=0 wrapmargin=0
 
@@ -290,9 +268,129 @@ set sessionoptions-=buffers
 " Disable all session locking
 let g:session_lock_enabled = 0
 
-nnoremap ,r :so ~/.vimrc<CR>
-
 " ================ Indentation ======================
+
+" ==================== COC ==========================
+
+" Reduce updatetime from 4000 to 300 to avoid issues with coc.nvim
+set updatetime=300
+
+set shortmess+=c
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for format selected region
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Create mappings for function text object, requires document symbols feature of languageserver.
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
+
+" Use <TAB> for select selections ranges, needs server support, like: coc-tsserver, coc-python
+nmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <TAB> <Plug>(coc-range-select)
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+
+" Use `:Fold` to fold current buffer
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" use `:OR` for organize import of current buffer
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Add status line support, for integration with other plugin, checkout `:h coc-status`
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Using CocList
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+let g:coc_global_extensions = ['coc-solargraph']
+
+" ===================================================
 
 set nu
 set autoindent
@@ -306,12 +404,15 @@ set expandtab
 filetype plugin on
 filetype indent on
 
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
-
-set nowrap       "Don't wrap lines
-set linebreak    "Wrap lines at convenient points
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2
+autocmd FileType go setlocal ts=4 sts=4 sw=4
+" au FileType go setlocal omnifunc=go#complete#GocodeComplete
 
 " Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+nnoremap p p=`]
+nnoremap P P=`]
+
+set shell=/usr/local/bin/zsh
+
+
+nnoremap ,r :so ~/.config/nvim/init.vim<CR>
