@@ -8,6 +8,8 @@ sudo apt install yarn
 sudo apt install golang
 sudo apt install jq
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 mkdir -p $HOME/workspace
