@@ -89,7 +89,7 @@ and ps.created_at between {{from}} and {{to}}
 and ps.phase_id = {{phase_id}}::uuid;
 
 Alghorytms to grokk
-- [ ] Bloom filter
+- [x] Bloom filter
 - [x] Fourier transform
 - [ ] Hyperlog
 - [ ] Linear programming и Simplex algorithm

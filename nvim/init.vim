@@ -414,5 +414,4 @@ nnoremap P P=`]
 
 set shell=/usr/local/bin/zsh
 
-
 nnoremap ,r :so ~/.config/nvim/init.vim<CR>

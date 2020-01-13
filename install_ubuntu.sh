@@ -5,7 +5,6 @@ sudo apt install zsh
 sudo apt install curl
 sudo apt install nodejs
 sudo apt install yarn
-sudo apt install rust
 sudo apt install golang
 sudo apt install jq
 
