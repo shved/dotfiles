@@ -22,6 +22,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'vim-ruby/vim-ruby'
   Plug 'fatih/vim-go'
+  Plug 'rust-lang/rust.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
