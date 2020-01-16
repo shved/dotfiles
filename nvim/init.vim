@@ -292,6 +292,8 @@ filetype indent on
 nnoremap p p=`]
 nnoremap P P=`]
 
+" ==================== Misc =========================
+
 set shell=/usr/local/bin/zsh
 
 let g:python3_host_prog=system("which python3")
