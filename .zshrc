@@ -21,6 +21,7 @@ alias ws="cd ~/workspace"
 alias ll="ls -lah"
 alias pgp="pgp2"
 alias vim="nvim"
+alias python="/usr/local/bin/python3.7"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -47,8 +48,8 @@ __git_files () {
 bindkey '^r' history-incremental-search-backward
 
 set -o vi
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 # override steeef theme prompt
 export PROMPT=$'%{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)$ '

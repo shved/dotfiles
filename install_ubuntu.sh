@@ -1,32 +1,31 @@
 #!/usr/bin/env bash
 
-sudo apt install neovim
-sudo apt install zsh
-sudo apt install curl
-sudo apt install nodejs
-sudo apt install yarn
-sudo apt install golang
-sudo apt install jq
+# === INSTALL THIGS ===
+sudo apt install build-essential cmake python3-dev python3-pip neovim zsh curl nodejs npm yarn jq
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
+# === VIM ===
 curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-mkdir -p $HOME/workspace
-
-cp -f .ackrc $HOME
-cp -f .gitconfig $HOME
+pip3 install neovim
 
 mkdir -p $HOME/.config/nvim/colors
 cp -f nvim/colors/* $HOME/.config/nvim/colors
 cp -f nvim/init.vim $HOME/.config/nvim
 
-nvim -E -c 'PlugInstall | quit | quit'
+nvim +PlugInstall +UpdateRemotePlugins +qa
 
 cp -f ssh/id_rsa.pub $HOME/.ssh
 cp -f ssh/config $HOME/.ssh
 
-# ruby-install
+python3 $HOME/.local/share/nvim/plugged/YouCompleteMe/install.sh --go-completer --rust-completer --ts-completer
+
+# === GO ===
+sudo apt install golang
+
+# === RUST ===
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# === RUBY ===
 wget -O ruby-install-0.7.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.7.0.tar.gz
 tar -xzvf ruby-install-0.7.0.tar.gz
 cd ruby-install-0.7.0/
@@ -37,7 +36,6 @@ rm ruby-install-0.7.0.tar.gz
 
 ruby-install ruby-2.7.0
 
-# chruby
 wget -O chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz
 tar -xzvf chruby-0.3.9.tar.gz
 cd chruby-0.3.9/
@@ -46,13 +44,16 @@ cd ..
 rm -r chruby-0.3.9
 rm chruby-0.3.9.tar.gz
 
-# gem install solargraph
-# solargraph config
-# gem install neovim
-# yarn global install neovim
-
+# === ZSH ===
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 chsh -s $(which zsh)
 
 cp -f .zshrc $HOME
+
+# === MISC ===
+mkdir -p $HOME/workspace
+
+cp -f .ackrc $HOME
+cp -f .gitconfig $HOME
+
