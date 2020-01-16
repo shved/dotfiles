@@ -17,7 +17,7 @@ nvim +PlugInstall +UpdateRemotePlugins +qa
 cp -f ssh/id_rsa.pub $HOME/.ssh
 cp -f ssh/config $HOME/.ssh
 
-python3 $HOME/.local/share/nvim/plugged/YouCompleteMe/install.sh --go-completer --rust-completer --ts-completer
+python3 $HOME/.local/share/nvim/plugged/YouCompleteMe/install.py --go-completer --rust-completer --ts-completer
 
 # === GO ===
 sudo apt install golang

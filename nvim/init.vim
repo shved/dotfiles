@@ -294,6 +294,6 @@ nnoremap P P=`]
 
 set shell=/usr/local/bin/zsh
 
-let g:python3_host_prog="/usr/local/bin/python3"
+let g:python3_host_prog=system("which python3")
 
 nnoremap ,r :so ~/.config/nvim/init.vim<CR>

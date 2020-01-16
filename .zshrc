@@ -21,7 +21,7 @@ alias ws="cd ~/workspace"
 alias ll="ls -lah"
 alias pgp="pgp2"
 alias vim="nvim"
-alias python="/usr/local/bin/python3.7"
+alias python=$(which python3)
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
