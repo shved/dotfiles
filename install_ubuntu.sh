@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # === INSTALL THIGS ===
-sudo apt install build-essential cmake python3-dev python3-pip neovim zsh curl nodejs npm yarn jq
+sudo apt install build-essential cmake python3-dev python3-pip neovim zsh curl nodejs npm yarn jq git
 
 # === VIM ===
 curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -13,9 +13,6 @@ cp -f nvim/colors/* $HOME/.config/nvim/colors
 cp -f nvim/init.vim $HOME/.config/nvim
 
 nvim +PlugInstall +UpdateRemotePlugins +qa
-
-cp -f ssh/id_rsa.pub $HOME/.ssh
-cp -f ssh/config $HOME/.ssh
 
 python3 $HOME/.local/share/nvim/plugged/YouCompleteMe/install.py --go-completer --rust-completer --ts-completer
 
@@ -52,8 +49,11 @@ chsh -s $(which zsh)
 cp -f .zshrc $HOME
 
 # === MISC ===
+
+cp -f ssh/id_rsa.pub $HOME/.ssh
+cp -f ssh/config $HOME/.ssh
+
 mkdir -p $HOME/workspace
 
 cp -f .ackrc $HOME
 cp -f .gitconfig $HOME
-
