@@ -25,6 +25,9 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim'
   Plug 'ycm-core/YouCompleteMe'
+  Plug 'slim-template/vim-slim'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
 
 " ======================= ctrlp stuff ========================
