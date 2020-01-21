@@ -31,6 +31,7 @@ gpg -e -u "Sender User Name" -r "Receiver User Name" somefile
 gpg -d mydata.tar.gpg
 
 grep -R "regex" some/folder
+grep -R "RequestStore" ./*/**/spec
 zgrep "sign_up" beeline_kz_production_rosing_api_2020_01_05.log.gz
 
 arr.group_by { |x| x }.map { |element, matches| [ element, matches.length ] }.to_h
