@@ -21,6 +21,24 @@ curl -XPOST -H "Content-Type: application/json" -d '{"contact":{"Email":"hi.bye@
 
 curl -v -H 'Content-Type: application/json' -- 'https://example.com/?asdf=asdf' | jq '.results[] | {id: .id, title: .title}'
 
+with headers:
+curl -i https://example.com
+follow redirect:
+curl -I -L https://example.com/redirected
+post file:
+curl -d @file https://example.com receiver -o saved
+ls -l | curl -d @- https://example.com/receiver -o saved
+verbose:
+curl -v https://example.com -o /dev/null
+resolve sert locally:
+curl https://example.com/ --resolve example.com:443:172.0.0.1
+http version:
+curl --http1.0 https://example.com
+curl --http2 https://example.com
+save and use cookies:
+curl -c cookiejar.txt https://example.com
+curl -b cookiejar.txt https://example.com
+
 openssl enc -aes-256-cbc -pbkdf2 -in un_encrypted.data -out encrypted.data
 openssl enc -d -aes-256-cbc -pbkdf2 -in encrypted.data -out un_encrypted.data
 
