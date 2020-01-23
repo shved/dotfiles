@@ -1,5 +1,5 @@
 24.2.4. Отказ от программирования
-Программирование дорого и непредсказуемо по сравнению со многими другими видами деятельности, и полученная программа часто не на 100% надежна. Программирование трудоемко, и — по многим причинам — многие серьезные проекты задерживаются из-за неготовности кода. Так почему бы программирование как род деятельности совсем не устранить из процесса? Бьерн Страуструп, Язык программирования С++ (Третье издание
+Программирование дорого и непредсказуемо по сравнению со многими другими видами деятельности, и полученная программа часто не на 100% надежна. Программирование трудоемко, и — по многим причинам — многие серьезные проекты задерживаются из-за неготовности кода. Так почему бы программирование как род деятельности совсем не устранить из процесса? Бьерн Страуструп, Язык программирования С++ (Третье издание)
 
 Greatest books:
 * High performance browser networking. Ilya Gorelik
@@ -11,8 +11,8 @@ Greatest books:
 * Writing An Interpreter In Go. Thorsten Ball
 * Business model generation Osterwalder & Pigneur
 
-https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html 
-https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/ 
+https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html
+https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
 
 git log --all --grep='<pattern>' | ack '^commit\s+'
 
@@ -21,6 +21,9 @@ curl -u 73ea6362d09a90a6db650f3e9aedf6ae90626a7e5630f2eb49d582ba: -H "Content-Ty
 curl -XPOST -H "Content-Type: application/json" -d '{"contact":{"Email":"hi.bye@some.thing"}}' https://api2.autopilothq.com/v1/contac
 
 curl -v -H 'Content-Type: application/json' -- 'https://example.com/?asdf=asdf' | jq '.results[] | {id: .id, title: .title}'
+
+First: The term monad is a bit vacuous if you are not a mathematician. An alternative term is computation builder which is a bit more descriptive of what they are actually useful for.
+https://stackoverflow.com/a/194207/4651545
 
 with headers:
 curl -i https://example.com
@@ -95,17 +98,17 @@ pg_size_pretty(pg_table_size(relid) - pg_relation_size(relid)) AS external,
 pg_size_pretty(pg_indexes_size(relid)) AS indexes
 FROM pg_catalog.pg_statio_user_tables ORDER BY pg_total_relation_size(relid) DESC;
 
-select distinct(s.billing_account_id) 
+select distinct(s.billing_account_id)
 from phase_switches ps
 inner join subscriptions s
 on s.id = ps.subscription_id
-where exists 
-  (select subscription_id 
-  from phase_switches 
-  where created_at between {{from}} and {{to}} 
+where exists
+  (select subscription_id
+  from phase_switches
+  where created_at between {{from}} and {{to}}
   and phase_id = {{phase_id}}::uuid
   and subscription_id = ps.subscription_id)
-and ps.created_at between {{from}} and {{to}} 
+and ps.created_at between {{from}} and {{to}}
 and ps.phase_id = {{phase_id}}::uuid;
 
 Alghorytms to grokk
