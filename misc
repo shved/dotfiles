@@ -16,12 +16,6 @@ https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
 
 git log --all --grep='<pattern>' | ack '^commit\s+'
 
-curl -u 73ea6362d09a90a6db650f3e9aedf6ae90626a7e5630f2eb49d582ba: -H "Content-Type: application/json" -X POST -d '{"format": "csv", "type": "leads", "send_done_email": false }' https://close.io/api/v1/export/lead/
-
-curl -XPOST -H "Content-Type: application/json" -d '{"contact":{"Email":"hi.bye@some.thing"}}' https://api2.autopilothq.com/v1/contac
-
-curl -v -H 'Content-Type: application/json' -- 'https://example.com/?asdf=asdf' | jq '.results[] | {id: .id, title: .title}'
-
 First: The term monad is a bit vacuous if you are not a mathematician. An alternative term is computation builder which is a bit more descriptive of what they are actually useful for.
 https://stackoverflow.com/a/194207/4651545
 
@@ -43,6 +37,15 @@ save and use cookies:
 curl -c cookiejar.txt https://example.com
 curl -b cookiejar.txt https://example.com
 
+curl -u 73ea6362d09a90a6db650f3e9aedf6ae90626a7e5630f2eb49d582ba: -H "Content-Type: application/json" -X POST -d '{"format": "csv", "type": "leads", "send_done_email": false }' https://close.io/api/v1/export/lead/
+curl -XPOST -H "Content-Type: application/json" -d '{"contact":{"Email":"hi.bye@some.thing"}}' https://api2.autopilothq.com/v1/contac
+curl -v -H 'Content-Type: application/json' -- 'https://example.com/?asdf=asdf' | jq '.results[] | {id: .id, title: .title}'
+
+telnet -4 www.redhat.com 80
+nc -w3 -4 -v www.redhat.com 80
+
+traceroute www.google.com
+
 openssl enc -aes-256-cbc -pbkdf2 -in un_encrypted.data -out encrypted.data
 openssl enc -d -aes-256-cbc -pbkdf2 -in encrypted.data -out un_encrypted.data
 
@@ -63,12 +66,13 @@ du -hs /* | sort -rh | head
 
 hexdump -C /dev/urandom
 
-:%!xxd
+:%!xxd hex edit vim
 
 pngquant **.png --ext .png --force
 
 LC_CTYPE="C.UTF-8" ssh to somewhere
 
+port forwarding
 ssh -R2001:localhost:143  remote.host.net
 ssh -L2001:remote.net:143 remote.net
 
