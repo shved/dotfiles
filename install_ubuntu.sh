@@ -17,7 +17,9 @@ nvim +PlugInstall +UpdateRemotePlugins +qa
 python3 $HOME/.local/share/nvim/plugged/YouCompleteMe/install.py --go-completer --rust-completer --ts-completer
 
 # === GO ===
-sudo apt install golang
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install golang-go
 
 # === RUST ===
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
