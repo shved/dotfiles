@@ -46,6 +46,12 @@ nc -w3 -4 -v www.redhat.com 80
 
 traceroute www.google.com
 
+socat -d -d - TCP4:www.example.com:80
+socat -d -d - TCP:www.example.com:80,retry=5
+socat -d -d - TCP4-LISTEN:www.example.com:80,fork
+socat -u STDIN STDOUT
+socat -d -d READLINE\!\!OPEN:file.txt,creat,trunc SYSTEM:'read stdin; echo $stdin'
+
 openssl enc -aes-256-cbc -pbkdf2 -in un_encrypted.data -out encrypted.data
 openssl enc -d -aes-256-cbc -pbkdf2 -in encrypted.data -out un_encrypted.data
 
