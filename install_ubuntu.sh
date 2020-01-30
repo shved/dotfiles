@@ -16,6 +16,9 @@ nvim +PlugInstall +UpdateRemotePlugins +qa
 
 python3 $HOME/.local/share/nvim/plugged/YouCompleteMe/install.py --go-completer --rust-completer --ts-completer
 
+# === POSTGRES ===
+sudo apt install postgresql postgresql-contrib libpq-dev
+
 # === GO ===
 # BETTER INSTALL LATEST VERSION FROM GITHUB
 # sudo add-apt-repository ppa:longsleep/golang-backports
