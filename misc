@@ -13,6 +13,7 @@ Greatest books:
 
 https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html
 https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
+http://postgres-data-types.pvh.ca/#1
 
 git log --all --grep='<pattern>' | ack '^commit\s+'
 
