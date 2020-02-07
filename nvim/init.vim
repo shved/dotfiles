@@ -160,7 +160,7 @@ let g:NERDTreeWinSize=44
 
 " some stuff to get the mouse going in term
 set mouse=a
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 set listchars=tab:>–,trail:~,extends:>,precedes:<,nbsp:+
 set list

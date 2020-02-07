@@ -56,7 +56,6 @@ cp -f .zshrc $HOME
 
 # === MISC ===
 
-cp -f ssh/id_rsa.pub $HOME/.ssh
 cp -f ssh/config $HOME/.ssh
 
 mkdir -p $HOME/workspace
