@@ -16,6 +16,7 @@ https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
 http://postgres-data-types.pvh.ca/#1
 https://erthalion.info/2019/12/06/postgresql-stay-curious/
 https://sipb.mit.edu/doc/safe-shell/
+https://serverfault.com/questions/885403/linux-tracking-the-source-of-netstat-s-failed-connection-attempts
 
 git log --all --grep='<pattern>' | ack '^commit\s+'
 
@@ -45,7 +46,18 @@ curl -XPOST -H "Content-Type: application/json" -d '{"contact":{"Email":"hi.bye@
 curl -v -H 'Content-Type: application/json' -- 'https://example.com/?asdf=asdf' | jq '.results[] | {id: .id, title: .title}'
 
 telnet -4 www.redhat.com 80
-nc -w3 -4 -v www.redhat.com 80
+netcat: nc -w3 -4 -v www.redhat.com 80
+
+netstat -s | grep 'Tcp:' -A 10 # outbound
+netstat -ntp | grep SERVICE_PORT # inbound
+
+free -m
+
+dmesg -l err
+
+ss -an | awk '{print $2}' | sort | uniq -c | sort -rn
+
+nload
 
 traceroute www.google.com
 
@@ -68,6 +80,9 @@ grep -R "regex" some/folder
 grep -R "RequestStore" ./*/**/spec
 grep "t\.string.*index:\strue" apps/api/db/migrate/*
 zgrep "sign_up" beeline_kz_production_rosing_api_2020_01_05.log.gz
+
+to see kernel version
+uname -a
 
 arr.group_by { |x| x }.map { |element, matches| [ element, matches.length ] }.to_h
 
@@ -92,6 +107,8 @@ rename
 find . -name "*.ua.yml" -exec rename -v 's/\.ua\.yml$/\.uk\.yml/i' {} \;
 find . -name '*.txt' -print0 | xargs -0 sed -i "" "s/oldword/newword/g"
 find dir -name '*.rb' -type f -exec sed -i -e 's/regex/replacement/g' -- {} +
+
+tar -zcvf archive.tar.gz directory/
 
 Constant       O(1)
 Logarithmic    O(log N)
