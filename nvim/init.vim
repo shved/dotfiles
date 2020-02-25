@@ -296,7 +296,7 @@ nnoremap P P=`]
 " ==================== Misc =========================
 set nocompatible
 
-set shell=/usr/local/bin/zsh
+set shell=/bin/zsh
 
 let g:python3_host_prog=system("which python3")
 
