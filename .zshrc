@@ -47,7 +47,6 @@ __git_files () {
 # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
 bindkey '^r' history-incremental-search-backward
 
-set -o vi
 export EDITOR=nvim
 export VISUAL=nvim
 
