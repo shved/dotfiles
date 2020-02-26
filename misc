@@ -18,6 +18,14 @@ https://erthalion.info/2019/12/06/postgresql-stay-curious/
 https://sipb.mit.edu/doc/safe-shell/
 https://serverfault.com/questions/885403/linux-tracking-the-source-of-netstat-s-failed-connection-attempts
 
+terminal control keys
+move around:
+ctrl+a ctrl+e
+alt+b alt+f
+delete:
+word: ctrl+w ctrl+d
+line back and forth: ctrl+u ctrl+k
+
 git log --all --grep='<pattern>' | ack '^commit\s+'
 
 First: The term monad is a bit vacuous if you are not a mathematician. An alternative term is computation builder which is a bit more descriptive of what they are actually useful for.
