@@ -26,6 +26,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'slim-template/vim-slim'
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'KKPMW/oldbook-vim'
 call plug#end()
 
 " ======================= ctrlp stuff ========================
@@ -117,14 +118,12 @@ set nobackup
 set nowritebackup
 set nowb
 
-
 " =================== Appearance ====================
-colorscheme pencil
-set background=dark
-let g:pencil_gutter_color = 1
+
+colorscheme oldbook
+set termguicolors
 
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor_dark',
       \ 'component_function': {
       \     'filename': 'LightLineFilename'
       \   }
