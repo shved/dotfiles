@@ -97,6 +97,7 @@ arr.group_by { |x| x }.map { |element, matches| [ element, matches.length ] }.to
 
 du -hs .
 du -hs /* | sort -rh | head
+du -hsx * | sort -rh | head -10
 
 hexdump -C /dev/urandom
 

@@ -52,3 +52,6 @@ export VISUAL=nvim
 
 # override steeef theme prompt
 export PROMPT=$'%{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)$ '
+
+# man 1 bash
+HISTCONTROL=ignoredups
