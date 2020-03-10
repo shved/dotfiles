@@ -27,6 +27,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'KKPMW/oldbook-vim'
+  Plug 'arzg/vim-oldbook8'
 call plug#end()
 
 " ======================= ctrlp stuff ========================
@@ -120,7 +121,7 @@ set nowb
 
 " =================== Appearance ====================
 
-colorscheme oldbook
+colorscheme oldbook8
 set termguicolors
 
 let g:lightline = {
