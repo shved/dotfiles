@@ -121,8 +121,9 @@ set nowb
 
 " =================== Appearance ====================
 
-colorscheme oldbook8
 set termguicolors
+" Load my color scheme if it exists.
+silent! colorscheme oldbook8
 
 let g:lightline = {
       \ 'component_function': {
@@ -149,14 +150,14 @@ endfunction
 nnoremap <silent> <C-\> :call OpenNerdTree()<CR>
 let NERDTreeShowHidden=1
 
-" Make window close if nerdtree is the last opened buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 nmap <CR> :NERDTreeToggle<CR>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize=44
+
+" Make window close if nerdtree is the last opened buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " some stuff to get the mouse going in term
 set mouse=a
@@ -175,6 +176,7 @@ set autoread                    "Reload files changed outside vim
 " exist in the background without being in a window.
 set hidden
 "turn on syntax highlighting
+filetype plugin indent on
 syntax on
 syntax enable
 
@@ -212,8 +214,6 @@ set foldmethod=manual
 
 set textwidth=80
 
-set pastetoggle=<F10>
-
 set wrap linebreak
 set showbreak=" "
 
@@ -231,8 +231,6 @@ if exists("*matchadd")
   augroup END
 endif
 
-" set keymap=russian-jcukenwin
-" set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
@@ -282,9 +280,6 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-filetype plugin on
-filetype indent on
-
 " autocmd FileType ruby setlocal ts=2 sts=2 sw=2
 " autocmd FileType go setlocal ts=4 sts=4 sw=4
 " au FileType go setlocal omnifunc=go#complete#GocodeComplete
@@ -294,7 +289,6 @@ nnoremap p p=`]
 nnoremap P P=`]
 
 " ==================== Misc =========================
-set nocompatible
 
 set shell=/bin/zsh
 
