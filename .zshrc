@@ -50,8 +50,23 @@ bindkey '^r' history-incremental-search-backward
 export EDITOR=nvim
 export VISUAL=nvim
 
+# man 1 bash
+HISTCONTROL=ignoredups
+
+# R    Display colours escape chars as-is (so they're displayed).
+# i    Ignore case unless pattern has upper case chars.
+# M    Display line numbers and position.
+# Q    Never ring terminal bell.
+# X    Don't clear the screen on exit.
+# F    Quit if output fits on a single screen.
+# L    Ignore LESSOPEN (some Linux distros set this to defaults)
+export LESS="RiMQXFL"
+
 # override steeef theme prompt
 export PROMPT=$'%{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)$ '
 
-# man 1 bash
-HISTCONTROL=ignoredups
+# For copying pretty examples
+unprompt() {
+  export PS1='$ '
+  export RPROMPT=' '
+}
