@@ -66,7 +66,7 @@ export LESS="RiMQXFL"
 export PROMPT=$'%{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)$ '
 
 # For copying pretty examples
-unprompt() {
+noprompt() {
   export PS1='$ '
   export RPROMPT=' '
 }
