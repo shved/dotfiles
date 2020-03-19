@@ -199,10 +199,6 @@ vmap tl <Esc>:execute ':tabnext'<CR>
 nmap th :execute ':tabprevious'<CR>
 vmap th <Esc>:execute ':tabprevious'<CR>
 
-" close tab
-nmap td :execute ':tabclose'<CR>
-vmap td <Esc>:execute ':tabclose'<CR>
-
 " keep cursor position after yanking
 vmap y y`]
 
