@@ -8,8 +8,6 @@ curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://r
 
 pip3 install neovim
 
-mkdir -p $HOME/.config/nvim/colors
-cp -f nvim/colors/* $HOME/.config/nvim/colors
 cp -f nvim/init.vim $HOME/.config/nvim
 
 nvim +PlugInstall +UpdateRemotePlugins +qa
@@ -60,5 +58,4 @@ cp -f ssh/config $HOME/.ssh
 
 mkdir -p $HOME/workspace
 
-cp -f .ackrc $HOME
 cp -f .gitconfig $HOME
