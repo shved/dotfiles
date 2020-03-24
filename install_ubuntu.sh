@@ -45,6 +45,8 @@ cd ..
 rm -r chruby-0.3.9
 rm chruby-0.3.9.tar.gz
 
+cp -f .irbrc $HOME
+
 # === ZSH ===
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
