@@ -19,6 +19,7 @@
 * https://sipb.mit.edu/doc/safe-shell/
 * https://serverfault.com/questions/885403/linux-tracking-the-source-of-netstat-s-failed-connection-attempts
 * https://sanctum.geek.nz/arabesque/series/unix-as-ide/
+* https://mosermichael.github.io/jq-illustrated/dir/content.html
 
 ### Alghorytms to grokk
 - [x] Bloom filter
