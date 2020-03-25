@@ -28,6 +28,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'KKPMW/oldbook-vim'
   Plug 'arzg/vim-oldbook8'
+  Plug 'pechorin/any-jump.vim'
 call plug#end()
 
 " ======================= ctrlp stuff ========================
