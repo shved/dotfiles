@@ -20,6 +20,7 @@
 * https://serverfault.com/questions/885403/linux-tracking-the-source-of-netstat-s-failed-connection-attempts
 * https://sanctum.geek.nz/arabesque/series/unix-as-ide/
 * https://mosermichael.github.io/jq-illustrated/dir/content.html
+* https://www.honeybadger.io/blog/the-rubyist-guide-to-unicode-utf8
 
 ### Alghorytms to grokk
 - [x] Bloom filter
