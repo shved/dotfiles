@@ -143,6 +143,9 @@ Factorial      O(N!)
 
 SQL
 
+a quick HTML report of your databases  
+`psql -c "\l+" -H -q postgres > out.html`
+
 See how much space your tables (and indexes!) are taking up space  
 SELECT  
 relname AS table_name,  
