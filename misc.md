@@ -21,6 +21,7 @@
 * https://sanctum.geek.nz/arabesque/series/unix-as-ide/
 * https://mosermichael.github.io/jq-illustrated/dir/content.html
 * https://www.honeybadger.io/blog/the-rubyist-guide-to-unicode-utf8
+* https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/
 
 ### Alghorytms to grokk
 - [x] Bloom filter
