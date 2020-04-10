@@ -61,3 +61,5 @@ cp -f ssh/config $HOME/.ssh
 mkdir -p $HOME/workspace
 
 cp -f .gitconfig $HOME
+
+npm install -g tldr
