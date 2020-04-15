@@ -107,7 +107,8 @@ save and use cookies:
 to see kernel version  
 `uname -a`  
 
-`arr.group_by { |x| x }.map { |element, matches| [ element, matches.length ] }.to_h`
+`go fmt ./...`
+`gofmt -w ./`
 
 `du -hs .`  
 `du -hs /* | sort -rh | head`  
@@ -155,16 +156,3 @@ pg_size_pretty(pg_relation_size(relid)) AS internal,
 pg_size_pretty(pg_table_size(relid) - pg_relation_size(relid)) AS external,  
 pg_size_pretty(pg_indexes_size(relid)) AS indexes  
 FROM pg_catalog.pg_statio_user_tables ORDER BY pg_total_relation_size(relid) DESC;  
-
-select distinct(s.billing_account_id)  
-from phase_switches ps  
-inner join subscriptions s  
-on s.id = ps.subscription_id  
-where exists  
-  (select subscription_id  
-  from phase_switches  
-  where created_at between {{from}} and {{to}}  
-  and phase_id = {{phase_id}}::uuid  
-  and subscription_id = ps.subscription_id)  
-and ps.created_at between {{from}} and {{to}}  
-and ps.phase_id = {{phase_id}}::uuid;  
