@@ -45,6 +45,9 @@ line back and forth: `ctrl+u ctrl+k`
 > First: The term monad is a bit vacuous if you are not a mathematician. An alternative term is computation builder which is a bit more descriptive of what they are actually useful for.
 > https://stackoverflow.com/a/194207/4651545
 
+> "Dependency Injection" is a 25-dollar term for a 5-cent concept. [...] Dependency injection means giving an object its instance variables.
+> https://stackoverflow.com/a/140655
+
 ### curl
 with headers:  
 `curl -i https://example.com`  
