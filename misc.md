@@ -96,6 +96,10 @@ save and use cookies:
 `openssl enc -aes-256-cbc -pbkdf2 -in un_encrypted.data -out encrypted.data`  
 `openssl enc -d -aes-256-cbc -pbkdf2 -in encrypted.data -out un_encrypted.data`  
 
+`docker rm -f $(docker ps -aq)`  
+`docker rmi -f $(docker images -q)`  
+`docker system prune`  
+
 `sudo chown -R $USER:$GROUP ~/some-file`  
 
 `gpg --list-keys`  
