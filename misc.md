@@ -1,6 +1,13 @@
 > 24.2.4. Отказ от программирования
 > Программирование дорого и непредсказуемо по сравнению со многими другими видами деятельности, и полученная программа часто не на 100% надежна. Программирование трудоемко, и — по многим причинам — многие серьезные проекты задерживаются из-за неготовности кода. Так почему бы программирование как род деятельности совсем не устранить из процесса? Бьерн Страуструп, Язык программирования С++ (Третье издание)
 
+> First: The term monad is a bit vacuous if you are not a mathematician. An alternative term is computation builder which is a bit more descriptive of what they are actually useful for.
+> https://stackoverflow.com/a/194207/4651545
+
+> "Dependency Injection" is a 25-dollar term for a 5-cent concept. [...] Dependency injection means giving an object its instance variables.
+> https://stackoverflow.com/a/140655
+
+
 ### Best books
 * High performance browser networking. Ilya Gorelik
 * Computer systems from programmers perspective
@@ -41,12 +48,6 @@ word: `ctrl+w ctrl+d`
 line back and forth: `ctrl+u ctrl+k`  
 
 `git log --all --grep='<pattern>' | ack '^commit\s+'`  
-
-> First: The term monad is a bit vacuous if you are not a mathematician. An alternative term is computation builder which is a bit more descriptive of what they are actually useful for.
-> https://stackoverflow.com/a/194207/4651545
-
-> "Dependency Injection" is a 25-dollar term for a 5-cent concept. [...] Dependency injection means giving an object its instance variables.
-> https://stackoverflow.com/a/140655
 
 ### curl
 with headers:  
