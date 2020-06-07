@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # === INSTALL THIGS ===
-sudo apt install build-essential cmake python3-dev python3-pip neovim zsh curl nodejs npm yarn jq git ripgrep
+sudo apt install build-essential cmake python3-dev python3-pip neovim zsh curl nodejs npm yarn jq git ripgrep silversearcher-ag
 
 # === POSTGRES ===
 sudo apt install postgresql postgresql-contrib libpq-dev
