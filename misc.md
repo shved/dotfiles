@@ -31,10 +31,12 @@
 * https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/
 * https://blog.carlmjohnson.net/post/2020/go-cli-how-to-and-advice/
 
-### Alghorytms to grokk
+### Alghorytms and data structures to grokk
 - [x] Bloom filter
 - [x] Fourier transform
 - [x] Hyperlog
+- [ ] Count–min sketch
+- [ ] Reservoir sampling
 - [ ] Linear programming и Simplex algorithm
 - [ ] Diffie-Hellman
 
