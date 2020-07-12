@@ -146,6 +146,9 @@ rename
 
 `tar -zcvf archive.tar.gz directory/`
 
+Trace DNS lookup  
+`dig @8.8.8.8 +trace github.com`
+
 Constant       O(1)  
 Logarithmic    O(log N)  
 Linear         O(N)  
