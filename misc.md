@@ -7,7 +7,6 @@
 > "Dependency Injection" is a 25-dollar term for a 5-cent concept. [...] Dependency injection means giving an object its instance variables.
 > https://stackoverflow.com/a/140655
 
-
 ### Best books
 * High performance browser networking. Ilya Gorelik
 * Computer systems from programmers perspective
@@ -30,6 +29,10 @@
 * https://www.honeybadger.io/blog/the-rubyist-guide-to-unicode-utf8
 * https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/
 * https://blog.carlmjohnson.net/post/2020/go-cli-how-to-and-advice/
+
+### Cool Julia Evans cards
+* http://flashcards.wizardzines.com/
+* https://questions.wizardzines.com/
 
 ### Alghorytms and data structures to grokk
 - [x] Bloom filter
@@ -134,8 +137,8 @@ to see kernel version
 `LC_CTYPE="C.UTF-8"`
 
 port forwarding  
-`ssh -R2001:localhost:143  remote.host.net`  
-`ssh -L2001:remote.net:143 remote.net`  
+`ssh -R 2001:localhost:143  remote.host.net`  
+`ssh -L 2001:remote.net:143 remote.net`  
 
 `find . -name "*.ext"`
 
