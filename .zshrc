@@ -12,7 +12,6 @@ source $ZSH/oh-my-zsh.sh
 
 export ARCHFLAGS="-arch x86_64"
 
-alias ..="cd .."
 alias ws="cd ~/workspace"
 alias ll="ls -lah"
 alias pgp="pgp2"
