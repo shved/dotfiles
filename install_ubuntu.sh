@@ -65,5 +65,3 @@ chmod 600 $HOME/.shh/id_rsa.pub
 mkdir -p $HOME/workspace
 
 cp -f .gitconfig $HOME
-
-npm install -g tldr
