@@ -14,6 +14,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'rking/ag.vim'
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-session'
+  Plug 'zivyangll/git-blame.vim'
   Plug 'nelstrom/vim-visual-star-search'
   Plug 'tomtom/tcomment_vim'
   Plug 'airblade/vim-gitgutter'
@@ -47,6 +48,9 @@ nnoremap <silent> ,t :CtrlP<CR>
 
 " Use status bar even with single buffer
 set laststatus=2
+
+" git blame mapping
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 " ======================== syntastic ========================
 "mark syntax errors with :signs
