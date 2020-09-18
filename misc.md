@@ -30,6 +30,7 @@
 * https://www.honeybadger.io/blog/the-rubyist-guide-to-unicode-utf8
 * https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/
 * https://blog.carlmjohnson.net/post/2020/go-cli-how-to-and-advice/
+* https://www.alchemists.io/articles/ruby_antipatterns/
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
