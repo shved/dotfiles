@@ -31,6 +31,7 @@
 * https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/
 * https://blog.carlmjohnson.net/post/2020/go-cli-how-to-and-advice/
 * https://www.alchemists.io/articles/ruby_antipatterns/
+* https://steveklabnik.com/writing/some-people-understand-rest-and-http
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
