@@ -131,6 +131,7 @@ to see kernel version
 `du -hs .`  
 `du -hs /* | sort -rh | head`  
 `du -hsx * | sort -rh | head -10`  
+`ncdu .` — beautiful `du` alternative  
 
 `hexdump -C /dev/urandom`
 
