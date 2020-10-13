@@ -8,3 +8,6 @@ ui = true
 
 [core]
 pager = less -XFr
+
+[pull]
+rebase = false
