@@ -151,6 +151,20 @@ rename
 `find . -name "*.ua.yml" -exec rename -v 's/\.ua\.yml$/\.uk\.yml/i' {} \;`  
 `find . -name '*.txt' -print0 | xargs -0 sed -i "" "s/oldword/newword/g"`  
 `find dir -name '*.rb' -type f -exec sed -i -e 's/regex/replacement/g' -- {} +`  
+`find . -type d -name src`  
+`find . -type f -name src`  
+`find . -type l -name src`  
+`find . -type d -name '*.md' -not -path 'node_modules/*'`  
+Search files bigger than 100KB but smaller than 1MB:  
+`find . -type f -size +100k -size -1M`  
+Search files edited more than 3 days ago:  
+`find . -type f -mtime +3`  
+Search files edited in the last 24 hours:  
+`find . -type f -mtime -1`  
+You can delete all the files matching a search by adding the -delete option. This deletes all the files edited in the last 24 hours:  
+`find . -type f -mtime -1 -delete`  
+You can execute a command on each result of the search. In this example we run cat to print the file content:  
+`find . -type f -exec cat {} ;`  
 
 `tar -zcvf archive.tar.gz directory/`
 
