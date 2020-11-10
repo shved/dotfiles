@@ -21,7 +21,6 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim'
   Plug 'ycm-core/YouCompleteMe'
-  Plug 'KKPMW/oldbook-vim'
   Plug 'arzg/vim-oldbook8'
   Plug 'pechorin/any-jump.vim'
 call plug#end()
