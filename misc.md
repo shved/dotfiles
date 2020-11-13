@@ -11,7 +11,7 @@
 * High performance browser networking. Ilya Gorelik
 * Computer systems from programmers perspective
 * Grokking algorythms
-* Concurrency in go. Katherina Buduray Cox
+* Concurrency in go. Katherine Cox-Buday
 * The Imposter's Handbook. Rob conery
 * Linux programming interface
 * Writing An Interpreter In Go. Thorsten Ball
