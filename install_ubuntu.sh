@@ -2,6 +2,7 @@
 
 # === INSTALL THIGS ===
 sudo apt install build-essential cmake python3-dev python3-pip neovim zsh curl nodejs npm yarn jq git ripgrep silversearcher-ag flameshot ncdu
+sudo apt install tlp tlp-rdw # battery life improvements
 
 # === POSTGRES ===
 sudo apt install postgresql postgresql-contrib libpq-dev
