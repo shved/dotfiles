@@ -33,6 +33,7 @@
 * https://www.alchemists.io/articles/ruby_antipatterns/
 * https://steveklabnik.com/writing/nobody-understands-rest-or-http
 * https://steveklabnik.com/writing/some-people-understand-rest-and-http
+* https://betterdev.blog/minimal-safe-bash-script-template/
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
