@@ -105,6 +105,8 @@ save and use cookies:
 `socat -u STDIN STDOUT`  
 `socat -d -d READLINE\!\!OPEN:file.txt,creat,trunc SYSTEM:'read stdin; echo $stdin'`  
 
+`nmap  google.com`  
+
 `openssl enc -aes-256-cbc -pbkdf2 -in un_encrypted.data -out encrypted.data`  
 `openssl enc -d -aes-256-cbc -pbkdf2 -in encrypted.data -out un_encrypted.data`  
 
