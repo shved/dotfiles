@@ -20,19 +20,22 @@
 ### Great articles
 * https://blog.merovius.de/2017/06/18/how-not-to-use-an-http-router.html
 * https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html
-* https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
-* http://postgres-data-types.pvh.ca/#1
 * https://erthalion.info/2019/12/06/postgresql-stay-curious/
-* https://sipb.mit.edu/doc/safe-shell/
-* https://serverfault.com/questions/885403/linux-tracking-the-source-of-netstat-s-failed-connection-attempts
-* https://sanctum.geek.nz/arabesque/series/unix-as-ide/
-* https://mosermichael.github.io/jq-illustrated/dir/content.html
 * https://www.honeybadger.io/blog/the-rubyist-guide-to-unicode-utf8
 * https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/
 * https://blog.carlmjohnson.net/post/2020/go-cli-how-to-and-advice/
 * https://www.alchemists.io/articles/ruby_antipatterns/
 * https://steveklabnik.com/writing/nobody-understands-rest-or-http
 * https://steveklabnik.com/writing/some-people-understand-rest-and-http
+
+### Useful articles
+* https://msol.io/blog/tech/back-up-your-pgp-keys-with-gpg/
+* https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
+* http://postgres-data-types.pvh.ca/#1
+* https://sipb.mit.edu/doc/safe-shell/
+* https://serverfault.com/questions/885403/linux-tracking-the-source-of-netstat-s-failed-connection-attempts
+* https://sanctum.geek.nz/arabesque/series/unix-as-ide/
+* https://mosermichael.github.io/jq-illustrated/dir/content.html
 * https://betterdev.blog/minimal-safe-bash-script-template/
 
 ### Cool Julia Evans cards
