@@ -271,7 +271,7 @@ set smartindent
 set smarttab
 set shiftwidth=2
 set softtabstop=2
-set tabstop=2
+set tabstop=4
 set expandtab
 
 " autocmd FileType ruby setlocal ts=2 sts=2 sw=2
