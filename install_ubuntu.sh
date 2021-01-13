@@ -17,15 +17,15 @@ sudo apt install golang-go
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # === RUBY ===
-wget -O ruby-install-0.7.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.7.0.tar.gz
-tar -xzvf ruby-install-0.7.0.tar.gz
-cd ruby-install-0.7.0/
+wget -O ruby-install-0.8.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.8.1.tar.gz
+tar -xzvf ruby-install-0.8.1.tar.gz
+cd ruby-install-0.8.1/
 sudo make install
 cd ..
-rm -r ruby-install-0.7.0
-rm ruby-install-0.7.0.tar.gz
+rm -r ruby-install-0.8.1
+rm ruby-install-0.8.1.tar.gz
 
-ruby-install ruby-2.7.0
+ruby-install ruby-3.0.0
 
 wget -O chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz
 tar -xzvf chruby-0.3.9.tar.gz
