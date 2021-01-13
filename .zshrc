@@ -30,7 +30,7 @@ export TMPDIR=/tmp
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby ruby-2.7.0
+chruby ruby-3.0.0
 
 export GREP_COLOR='1;33'
 
