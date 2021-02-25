@@ -60,9 +60,10 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 
-" ===========================================================
-" ========================= MY STUFF ========================
-" ===========================================================
+" ================== Vim Go =========================
+let g:go_fmt_command = "goimports"
+let g:go_doc_popup_window = 1
+let g:go_gopls_gofumpt=1
 
 " ================ Completion =======================
 
@@ -270,7 +271,7 @@ set autoindent
 set smartindent
 set smarttab
 set shiftwidth=2
-set softtabstop=2
+set softtabstop=4
 set tabstop=4
 set expandtab
 
@@ -286,6 +287,6 @@ nnoremap P P=`]
 
 set shell=/bin/zsh
 
-let g:python3_host_prog="echo -n $(which python3)"
+let g:python3_host_prog='/usr/bin/python3'
 
 nnoremap ,r :so ~/.config/nvim/init.vim<CR>
