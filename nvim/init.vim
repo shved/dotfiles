@@ -19,6 +19,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'vim-ruby/vim-ruby'
   Plug 'fatih/vim-go'
+  Plug 'sebdah/vim-delve'
   Plug 'rust-lang/rust.vim'
   Plug 'ycm-core/YouCompleteMe'
   Plug 'arzg/vim-oldbook8'
