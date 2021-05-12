@@ -66,8 +66,10 @@ let g:go_fmt_command = "goimports"
 let g:go_doc_popup_window = 1
 let g:go_gopls_gofumpt=1
 
-" ================ Completion =======================
+" ================= Rust Vim ========================
+let g:rustfmt_autosave = 1
 
+" ================ Completion =======================
 set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
@@ -84,13 +86,11 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*.swp,*~,._*
 
 " ================ Scrolling ========================
-
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescroll=1
 set sidescrolloff=15
 
 " ================ Search ===========================
-
 set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
@@ -113,14 +113,12 @@ nnoremap <silent> ss <C-w>s
 let g:yankring_history_file = '.yankring-history'
 
 " ================ Turn Off Swap Files ==============
-
 set noswapfile
 set nobackup
 set nowritebackup
 set nowb
 
 " =================== Appearance ====================
-
 set termguicolors
 " Load my color scheme if it exists.
 silent! colorscheme oldbook8
