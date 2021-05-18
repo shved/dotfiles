@@ -37,6 +37,7 @@
 * https://sanctum.geek.nz/arabesque/series/unix-as-ide/
 * https://mosermichael.github.io/jq-illustrated/dir/content.html
 * https://betterdev.blog/minimal-safe-bash-script-template/
+* https://blog.ssdnodes.com/blog/cheatsheet-bash-shortcuts/
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
