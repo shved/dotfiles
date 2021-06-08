@@ -14,7 +14,7 @@ export ARCHFLAGS="-arch x86_64"
 
 alias ws="cd ~/workspace"
 alias ll="ls -lah"
-alias pgp="pgp2"
+# alias pgp="pgp2"
 alias vim="nvim"
 alias python=$(which python3)
 
@@ -25,8 +25,11 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export PATH=$PATH:~/.cargo/bin
+source "$HOME/.cargo/env"
 
 export TMPDIR=/tmp
+
+export PATH=~/.npm-global/bin:$PATH
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
@@ -61,7 +64,7 @@ export LESS="RiMQXFL"
 autoload -U colors; colors
 source ~/workspace/zsh-kubectl-prompt/kubectl.zsh
 
-export PROMPT=$'%{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)$ '
+export PROMPT=$'%{$fg[yellow]%}%D{%H:%M} %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)$ '
 export RPROMPT='%{$fg[cyan]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 # For copying pretty examples
