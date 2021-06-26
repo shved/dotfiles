@@ -38,6 +38,7 @@
 * https://mosermichael.github.io/jq-illustrated/dir/content.html
 * https://betterdev.blog/minimal-safe-bash-script-template/
 * https://blog.ssdnodes.com/blog/cheatsheet-bash-shortcuts/
+* https://fasterthanli.me/articles/rust-modules-vs-files
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
