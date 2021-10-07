@@ -152,6 +152,9 @@ to see kernel version
 port forwarding  
 `ssh -R 2001:localhost:143  remote.host.net`  
 `ssh -L 2001:remote.net:143 remote.net`  
+`ssh -L <local_host>:<local_port>:<remote_host>:<remove_port> <via>`  
+`ssh -L localhost:3001:example.com:4001 root@160.25.100.100`  
+`ssh -D 3000 <remote_host>`  
 
 `find . -name "*.ext"`
 
