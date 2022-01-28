@@ -39,6 +39,7 @@
 * https://betterdev.blog/minimal-safe-bash-script-template/
 * https://blog.ssdnodes.com/blog/cheatsheet-bash-shortcuts/
 * https://fasterthanli.me/articles/rust-modules-vs-files
+* https://threedots.tech/post/safer-enums-in-go/
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
