@@ -40,6 +40,8 @@
 * https://blog.ssdnodes.com/blog/cheatsheet-bash-shortcuts/
 * https://fasterthanli.me/articles/rust-modules-vs-files
 * https://threedots.tech/post/safer-enums-in-go/
+* https://ciechanow.ski/gps/
+* https://habr.com/ru/company/yandex/blog/459198/
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
