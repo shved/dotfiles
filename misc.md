@@ -42,6 +42,7 @@
 * https://threedots.tech/post/safer-enums-in-go/
 * https://ciechanow.ski/gps/
 * https://habr.com/ru/company/yandex/blog/459198/
+* https://www.linuxatemyram.com/
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
