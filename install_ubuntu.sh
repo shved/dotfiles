@@ -14,6 +14,7 @@ sudo apt install golang-go
 
 # === RUST ===
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo install sd
 
 # === RUBY ===
 wget -O ruby-install-0.8.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.8.1.tar.gz
