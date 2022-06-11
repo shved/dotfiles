@@ -43,6 +43,7 @@
 * https://ciechanow.ski/gps/
 * https://habr.com/ru/company/yandex/blog/459198/
 * https://www.linuxatemyram.com/
+* https://en.wikipedia.org/wiki/Thundering_herd_problem
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
