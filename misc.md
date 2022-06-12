@@ -44,6 +44,7 @@
 * https://habr.com/ru/company/yandex/blog/459198/
 * https://www.linuxatemyram.com/
 * https://en.wikipedia.org/wiki/Thundering_herd_problem
+* https://eng.uber.com/data-race-patterns-in-go/
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/
