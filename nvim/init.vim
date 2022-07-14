@@ -20,10 +20,17 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'vim-ruby/vim-ruby'
   Plug 'fatih/vim-go'
   Plug 'sebdah/vim-delve'
-  Plug 'rust-lang/rust.vim'
   Plug 'ycm-core/YouCompleteMe'
-  Plug 'arzg/vim-oldbook8'
   Plug 'pechorin/any-jump.vim'
+  Plug 'rust-lang/rust.vim'
+  Plug 'rhysd/vim-wasm'
+
+  Plug 'arzg/vim-oldbook8'
+  Plug 'vim-scripts/zenesque.vim'
+  Plug 'koron/vim-monochromenote'
+  Plug 'pbrisbin/vim-colors-off'
+  Plug 'huyvohcmc/atlas.vim'
+  Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 " ======================= ctrlp stuff ========================
@@ -62,12 +69,30 @@ let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 
 " ================== Vim Go =========================
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "gopls"
+let g:go_imports_mode = "gopls"
 let g:go_doc_popup_window = 1
 let g:go_gopls_gofumpt=1
+" already default
+" let g:go_fmt_autosave = 1
+" let g:go_imports_autosave = 1
 
 " ================= Rust Vim ========================
 let g:rustfmt_autosave = 1
+
+" YCM KEYBINDINGS
+function! YcmStuff() 
+  nnoremap gd :YcmCompleter GoToDefinition<cr>
+  " nnoremap rs :YcmRestartServer<cr>
+  " nnoremap <F1> :YcmCompleter FixIt<cr>
+  nnoremap K :YcmCompleter GetDoc<cr>
+  nnoremap ; :YcmCompleter GetType<cr>
+endfunction
+
+augroup rust
+  autocmd!
+  autocmd FileType rust call YcmStuff()
+augroup end
 
 " ================ Completion =======================
 set wildmode=list:longest
@@ -86,11 +111,13 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*.swp,*~,._*
 
 " ================ Scrolling ========================
+
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescroll=1
 set sidescrolloff=15
 
 " ================ Search ===========================
+
 set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
@@ -113,21 +140,45 @@ nnoremap <silent> ss <C-w>s
 let g:yankring_history_file = '.yankring-history'
 
 " ================ Turn Off Swap Files ==============
+
 set noswapfile
 set nobackup
 set nowritebackup
 set nowb
 
 " =================== Appearance ====================
+
 set termguicolors
-" Load my color scheme if it exists.
+set t_Co=256
+
+" uncomment to apply zenesque
+" silent! colorscheme zenesque
+" let g:zenesque_colors=1
+
+" uncomment to apply monochromenote
+" silent! colorscheme monochromenote
+
+" uncomment to apply colors_off
+" silent! colorscheme off
+" g:colors_off_a_little = 1
+
+" uncomment to apply oldbook8 scheme
 silent! colorscheme oldbook8
 
-let g:lightline = {
-      \ 'component_function': {
-      \     'filename': 'LightLineFilename'
-      \   }
-      \ }
+" uncomment to apply atlas scheme
+" silent! colorscheme atlas
+
+" uncomment to apply papercolor
+" set background=dark
+" silent! colorscheme PaperColor
+" let g:PaperColor_Theme_Options = {
+"                       \   'theme': {
+"                       \     'default.dark': {
+"                       \       'transparent_background': 1
+"                       \     }
+"                       \   }
+"                       \ }
+
 
 function! LightLineFilename()
   return expand('%')
@@ -152,7 +203,7 @@ nmap <CR> :NERDTreeToggle<CR>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeWinPos = "right"
-let g:NERDTreeWinSize=44
+let g:NERDTreeWinSize=48
 
 " Make window close if nerdtree is the last opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -238,7 +289,7 @@ endfor
 
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
-set re=1
+set re=0
 
 " vim-ruby indent style
 let g:ruby_indent_block_style = 'do'
