@@ -7,10 +7,7 @@ sudo apt install build-essential cmake python3-dev python3-pip neovim zsh curl n
 sudo apt install postgresql postgresql-contrib libpq-dev
 
 # === GO ===
-# BETTER INSTALL LATEST VERSION FROM GITHUB
-sudo add-apt-repository ppa:longsleep/golang-backports
-sudo apt update
-sudo apt install golang-go
+curl -sSL https://git.io/g-install | sh -s
 
 # === RUST ===
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -47,7 +44,7 @@ cp -f nvim/init.vim $HOME/.config/nvim/init.vim
 
 nvim +PlugInstall +UpdateRemotePlugins +qa
 
-python3 $HOME/.local/share/nvim/plugged/YouCompleteMe/install.py --go-completer --rust-completer --ts-completer
+python3 $HOME/.local/share/nvim/plugged/YouCompleteMe/install.py --all
 
 # === ZSH ===
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
