@@ -18,7 +18,7 @@
 * Business model generation Osterwalder & Pigneur
 
 ### Great articles
-* https://blog.merovius.de/2017/06/18/how-not-to-use-an-http-router.html
+* https://blog.merovius.de/posts/2017-06-18-how-not-to-use-an-http-router/
 * https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html
 * https://erthalion.info/2019/12/06/postgresql-stay-curious/
 * https://www.honeybadger.io/blog/the-rubyist-guide-to-unicode-utf8
