@@ -94,6 +94,8 @@ augroup rust
   autocmd FileType rust call YcmStuff()
 augroup end
 
+let g:ycm_rust_toolchain_root = "/home/shvedchenko/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/"
+
 " ================ Completion =======================
 set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
