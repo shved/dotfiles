@@ -46,6 +46,7 @@
 * https://en.wikipedia.org/wiki/Thundering_herd_problem
 * https://eng.uber.com/data-race-patterns-in-go/
 * https://dave.cheney.net/practical-go/presentations/qcon-china.html
+* https://ente.io/blog/tech/postgres-queue/
 
 ### Cool Julia Evans cards
 * http://flashcards.wizardzines.com/

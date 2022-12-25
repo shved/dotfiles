@@ -63,10 +63,8 @@ export LESS="RiMQXFL"
 
 # override steeef theme prompt
 autoload -U colors; colors
-source ~/workspace/zsh-kubectl-prompt/kubectl.zsh
 
 export PROMPT=$'%{$fg[yellow]%}%D{%H:%M} %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)$ '
-export RPROMPT='%{$fg[cyan]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 # For copying pretty examples
 promptoff() {
