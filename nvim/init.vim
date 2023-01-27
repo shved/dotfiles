@@ -50,9 +50,6 @@ nnoremap <silent> ,t :CtrlP<CR>
 " Use status bar even with single buffer
 set laststatus=2
 
-" git blame mapping
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
-
 " ======================== syntastic ========================
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
@@ -70,7 +67,6 @@ let g:session_autoload = 'no'
 
 " ================== Vim Go =========================
 let g:go_fmt_command = "gopls"
-let g:go_imports_mode = "gopls"
 let g:go_doc_popup_window = 1
 let g:go_gopls_gofumpt=1
 " already default
@@ -124,7 +120,6 @@ set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
-
 
 " Make 0 go to the first character rather than the beginning
 " of the line. When we're programming, we're almost always
