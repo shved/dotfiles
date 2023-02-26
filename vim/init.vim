@@ -17,21 +17,31 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-scripts/ReplaceWithRegister'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'vim-ruby/vim-ruby'
   Plug 'fatih/vim-go'
-  Plug 'sebdah/vim-delve'
   Plug 'ycm-core/YouCompleteMe'
   Plug 'pechorin/any-jump.vim'
   Plug 'rust-lang/rust.vim'
-  Plug 'rhysd/vim-wasm'
 
   Plug 'arzg/vim-oldbook8'
-  Plug 'vim-scripts/zenesque.vim'
-  Plug 'koron/vim-monochromenote'
-  Plug 'pbrisbin/vim-colors-off'
-  Plug 'huyvohcmc/atlas.vim'
-  Plug 'NLKNguyen/papercolor-theme'
+  Plug 'doums/darcula'
+  Plug 'jacoborus/tender.vim'
 call plug#end()
+
+" =================== Appearance ====================
+
+set termguicolors
+set t_Co=256
+
+silent! colorscheme darcula
+" silent! colorscheme oldbook8
+" silent! colorscheme tender
+
+function! LightLineFilename()
+  return expand('%')
+endfunction
+
+hi search cterm=none ctermfg=yellow ctermbg=brown
+
 
 " ======================= ctrlp stuff ========================
 
@@ -142,46 +152,6 @@ set noswapfile
 set nobackup
 set nowritebackup
 set nowb
-
-" =================== Appearance ====================
-
-set termguicolors
-set t_Co=256
-
-" uncomment to apply zenesque
-" silent! colorscheme zenesque
-" let g:zenesque_colors=1
-
-" uncomment to apply monochromenote
-" silent! colorscheme monochromenote
-
-" uncomment to apply colors_off
-" silent! colorscheme off
-" g:colors_off_a_little = 1
-
-" uncomment to apply oldbook8 scheme
-silent! colorscheme oldbook8
-
-" uncomment to apply atlas scheme
-" silent! colorscheme atlas
-
-" uncomment to apply papercolor
-" set background=dark
-" silent! colorscheme PaperColor
-" let g:PaperColor_Theme_Options = {
-"                       \   'theme': {
-"                       \     'default.dark': {
-"                       \       'transparent_background': 1
-"                       \     }
-"                       \   }
-"                       \ }
-
-
-function! LightLineFilename()
-  return expand('%')
-endfunction
-
-hi search cterm=none ctermfg=yellow ctermbg=brown
 
 " ==== NERD tree
 " Open the project tree and expose current file in the nerdtree with Ctrl-\

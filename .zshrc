@@ -1,4 +1,7 @@
+export PATH=$PATH:~/.cargo/bin
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+source "$HOME/.cargo/env"
 
 export ZSH=$HOME/.oh-my-zsh
 
@@ -14,33 +17,21 @@ export ARCHFLAGS="-arch x86_64"
 
 alias ws="cd ~/workspace"
 alias ll="ls -lah"
-# alias pgp="pgp2"
 alias vim="nvim"
 alias python=$(which python3)
 alias fd=fdfind
+unalias g
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
-export PATH=$PATH:~/.cargo/bin
-source "$HOME/.cargo/env"
-
 export TMPDIR=/tmp
-
-export PATH=~/.npm-global/bin:$PATH
-
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby ruby-3.0.0
 
 export GREP_COLOR='1;33'
 
 # Makes git auto completion faster favouring for local completions
 __git_files () {
-    _wanted files expl 'local files' _files
+  _wanted files expl 'local files' _files
 }
 
 # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
@@ -52,19 +43,16 @@ export VISUAL=nvim
 # man 1 bash
 HISTCONTROL=ignoredups
 
-# R    Display colours escape chars as-is (so they're displayed).
 # i    Ignore case unless pattern has upper case chars.
 # M    Display line numbers and position.
-# Q    Never ring terminal bell.
 # X    Don't clear the screen on exit.
 # F    Quit if output fits on a single screen.
 # L    Ignore LESSOPEN (some Linux distros set this to defaults)
-export LESS="RiMQXFL"
+export LESS="iMXFL"
 
 # override steeef theme prompt
 autoload -U colors; colors
-
-export PROMPT=$'%{$fg[yellow]%}%D{%H:%M} %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)$ '
+export PROMPT=$' %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $ '
 
 # For copying pretty examples
 promptoff() {
