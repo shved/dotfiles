@@ -337,3 +337,4 @@ set shell=/bin/zsh
 let g:python3_host_prog='/usr/bin/python3'
 
 nnoremap ,r :so ~/.config/nvim/init.vim<CR>
+nnoremap <C-f> :g/^func<CR>
