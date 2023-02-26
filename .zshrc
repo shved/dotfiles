@@ -52,7 +52,7 @@ export LESS="iMXFL"
 
 # override steeef theme prompt
 autoload -U colors; colors
-export PROMPT=$' %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $ '
+export PROMPT=$' %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$ '
 
 # For copying pretty examples
 promptoff() {

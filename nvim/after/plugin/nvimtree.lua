@@ -25,5 +25,6 @@ require("nvim-tree").setup({
         -- git = false,
       },
     },
+    special_files = {},
   },
 })
