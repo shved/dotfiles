@@ -73,6 +73,13 @@ vim.keymap.set("n", "<C-h>", "<C-W><C-h>")
 vim.keymap.set("n", "<C-k>", "<C-W><C-k>")
 vim.keymap.set("n", "<C-l>", "<C-W><C-l>")
 
+-- Make 0 go to the first character rather than the beginning
+-- of the line. When we're programming, we're almost always
+-- interested in working with text rather than empty space. If
+-- you want the traditional beginning of line, use ^
+vim.keymap.set("n", "0", "^")
+vim.keymap.set("n", "^", "0")
+
 --
 -- COLORS
 --
