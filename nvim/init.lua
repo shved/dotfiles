@@ -56,7 +56,7 @@ vim.g.mapleader = ","
 vim.keymap.set("n", "vv", vim.cmd.vsplit)
 vim.keymap.set("n", "ss", vim.cmd.split)
 
-vim.keymap.set("n", "<leader>r", ":so ~/.config/nvim/init.lua<CR>")
+-- vim.keymap.set("n", "<leader>r", ":so ~/.config/nvim/init.lua<CR>")
 
 vim.keymap.set("n", "tn", vim.cmd.tabnew)
 vim.keymap.set("n", "th", vim.cmd.tabprevious)
