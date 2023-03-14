@@ -113,6 +113,11 @@ return require('packer').startup(function(use)
 
   use { 'kdheepak/tabline.nvim', requires = { { 'hoob3rt/lualine.nvim' }, {'kyazdani42/nvim-web-devicons'} } }
 
+
+  use { 'mfussenegger/nvim-dap' }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use { 'theHamsta/nvim-dap-virtual-text' }
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
