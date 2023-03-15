@@ -1,5 +1,12 @@
 local dap = require("dap")
 
+local status_ok, dapui = pcall(require, 'dapui')
+if not status_ok then
+  return
+end
+
+dapui.setup()
+
 -- dap.adapters.go = {
 --   type = 'executable';
 --   command = 'node';
@@ -51,11 +58,23 @@ dap.configurations.go = {
   }
 }
 
-vim.keymap.set('n', '<leader>dc', function() require('dap').continue() end)
-vim.keymap.set('n', 'dn', function() require('dap').step_over() end)
+vim.keymap.set('n', '<leader>dc', function() 
+  require('dap').continue()
+  require('dapui').toggle()
+end)
+
+vim.keymap.set('n', 'do', function() require('dap').step_over() end)
 vim.keymap.set('n', 'di', function() require('dap').step_into() end)
 vim.keymap.set('n', 'du', function() require('dap').step_out() end)
 vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
 
-require("nvim-dap-virtual-text").setup()
-require("dapui").setup()
+-- dap.listeners.after.event_initialized["dapui_config"] = function()
+--   dapui.open()
+-- end
+
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end
