@@ -2,12 +2,10 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
---[[
 lsp.ensure_installed({
-	'gopls',
-	'rust_analyzer',
+  'gopls',
+  'rust_analyzer',
 })
---]]
 
 local cmp = require("cmp")
 local cmp_select = {behaviour = cmp.SelectBehavior.Select}
