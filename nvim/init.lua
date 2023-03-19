@@ -135,6 +135,9 @@ return require('packer').startup(function(use)
     }
   }
 
+  use 'fatih/vim-go'
+  use 'rust-lang/rust.vim'
+
   use 'f-person/git-blame.nvim'
   use 'airblade/vim-gitgutter'
   use 'terrortylor/nvim-comment'
