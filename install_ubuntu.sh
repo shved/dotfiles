@@ -9,7 +9,6 @@ curl -sSL https://git.io/g-install | sh -s
 # === RUST ===
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup component add rust-analyzer
-cargo install sd
 
 # === NVIM ===
 sudo add-apt-repository ppa:neovim-ppa/stable
