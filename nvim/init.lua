@@ -49,6 +49,8 @@ vim.opt.list = true
 
 vim.g.mapleader = ","
 
+vim.g.rustfmt_autosave = 1
+
 --
 -- KEYMAPS
 --
@@ -86,6 +88,8 @@ vim.keymap.set("n", "^", "0")
 
 -- vim.cmd.colorscheme("darcula")
 vim.cmd.colorscheme("oldbook8")
+-- vim.cmd.colorscheme("vim-monokai-tasty")
+-- vim.cmd.colorscheme("tender")
 
 --
 -- PLUGINS
@@ -145,4 +149,6 @@ return require('packer').startup(function(use)
 
   use 'doums/darcula'
   use 'arzg/vim-oldbook8'
+  use 'jacoborus/tender.vim'
+  use 'patstockwell/vim-monokai-tasty'
 end)

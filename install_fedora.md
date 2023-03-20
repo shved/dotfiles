@@ -20,6 +20,7 @@ sudo dnf install golang-x-tools-gopls
 # === RUST ===
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup component add rust-analyzer
+rustup component add rustfmt
 
 # === NVIM ===
 sudo dnf install neovim python3-neovim
