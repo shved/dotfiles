@@ -86,10 +86,17 @@ vim.keymap.set("n", "^", "0")
 -- COLORS
 --
 
+vim.cmd('set background=dark')
+
+-- vim.cmd.colorscheme("oldbook8")
+vim.cmd.colorscheme("newsprint")
+-- vim.cmd.colorscheme("atlas")
+-- vim.cmd.colorscheme("mies")
+-- vim.cmd.colorscheme("nofrils-dark")
+-- vim.cmd.colorscheme("nofrils-light")
+-- vim.cmd.colorscheme("typewriter-night")
+-- vim.cmd.colorscheme("off")
 -- vim.cmd.colorscheme("darcula")
-vim.cmd.colorscheme("oldbook8")
--- vim.cmd.colorscheme("vim-monokai-tasty")
--- vim.cmd.colorscheme("tender")
 
 --
 -- PLUGINS
@@ -149,6 +156,10 @@ return require('packer').startup(function(use)
 
   use 'doums/darcula'
   use 'arzg/vim-oldbook8'
-  use 'jacoborus/tender.vim'
-  use 'patstockwell/vim-monokai-tasty'
+  use 'jaredgorski/Mies.vim'
+  use 'robertmeta/nofrils'
+  use 'logico/typewriter'
+  use 'huyvohcmc/atlas.vim'
+  use 'bruth/vim-newsprint-theme'
+  use 'pbrisbin/vim-colors-off'
 end)
