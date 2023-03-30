@@ -1,7 +1,6 @@
+export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 export PATH=$PATH:~/.cargo/bin
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-source "$HOME/.cargo/env"
 
 export ZSH=$HOME/.oh-my-zsh
 
@@ -18,8 +17,6 @@ export ARCHFLAGS="-arch x86_64"
 alias ws="cd ~/workspace"
 alias ll="ls -lah"
 alias vim="nvim"
-alias python=$(which python3)
-alias fd=fdfind
 unalias g
 
 export LC_ALL=en_US.UTF-8
@@ -27,7 +24,7 @@ export LANG=en_US.UTF-8
 
 export TMPDIR=/tmp
 
-export GREP_COLOR='1;33'
+export GREP_COLORS='mt=1;33'
 
 # Makes git auto completion faster favouring for local completions
 __git_files () {
@@ -52,12 +49,7 @@ export LESS="iMXFL"
 
 # override steeef theme prompt
 autoload -U colors; colors
-export PROMPT=$' %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$ '
-
-# For copying pretty examples
-promptoff() {
-  export PS1='$ '
-  export RPROMPT=' '
-}
+# export PROMPT=$' %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$ '
+export PROMPT=$' %n${PR_RST}@%m${PR_RST}: %~${PR_RST} $vcs_info_msg_0_$ '
 
 alias lls="ls -lha --color=always -F --group-directories-first |awk '{k=0;s=0;for(i=0;i<=8;i++){;k+=((substr(\$1,i+2,1)~/[rwxst]/)*2^(8-i));};j=4;for(i=4;i<=10;i+=3){;s+=((substr(\$1,i,1)~/[stST]/)*j);j/=2;};if(k){;printf(\"%0o%0o \",s,k);};print;}'"

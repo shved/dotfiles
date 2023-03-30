@@ -1,0 +1,22 @@
+-- require("bufferline").setup{
+--   options = {
+--     mode = "tabs",
+--     diagnostics = "nvim_lsp",
+--     always_show_bufferline = true,
+--     separator_style = "slope",
+--   },
+--   highlights = {
+--     pick = {
+--       fg = '#100e23',
+--       bg = '#87DFEB'
+--     },
+--     pick_selected = {
+--       fg = '#100e23',
+--       bg = '#FFE6B3'
+--     },
+--     pick_visible = {
+--       fg = '#100e23',
+--       bg = '#87DFEB'
+--     }
+--   }
+-- }

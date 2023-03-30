@@ -1,5 +1,22 @@
 -- TODO check neovim defaults and remove obs options
 --
+-- COLORS
+--
+
+vim.cmd('set background=dark')
+-- vim.cmd('set background=light')
+
+-- vim.cmd.colorscheme("oldbook8")
+-- vim.cmd.colorscheme("newsprint")
+-- vim.cmd.colorscheme("nofrils-light")
+-- vim.cmd.colorscheme("nofrils-dark")
+-- vim.cmd.colorscheme("atlas")
+-- vim.cmd.colorscheme("mies")
+-- vim.cmd.colorscheme("typewriter-night")
+-- vim.cmd.colorscheme("off")
+vim.cmd.colorscheme("darcula")
+
+--
 -- OPTIONS
 --
 
@@ -83,22 +100,6 @@ vim.keymap.set("n", "0", "^")
 vim.keymap.set("n", "^", "0")
 
 --
--- COLORS
---
-
-vim.cmd('set background=dark')
-
--- vim.cmd.colorscheme("oldbook8")
-vim.cmd.colorscheme("newsprint")
--- vim.cmd.colorscheme("atlas")
--- vim.cmd.colorscheme("mies")
--- vim.cmd.colorscheme("nofrils-dark")
--- vim.cmd.colorscheme("nofrils-light")
--- vim.cmd.colorscheme("typewriter-night")
--- vim.cmd.colorscheme("off")
--- vim.cmd.colorscheme("darcula")
-
---
 -- PLUGINS
 --
 
@@ -123,6 +124,7 @@ return require('packer').startup(function(use)
   use { 'nvim-lualine/lualine.nvim', requires='kyazdani42/nvim-web-devicons' }
 
   use { 'kdheepak/tabline.nvim', requires = { { 'hoob3rt/lualine.nvim' }, {'kyazdani42/nvim-web-devicons'} } }
+  -- use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
 
 
   use { 'mfussenegger/nvim-dap' }
