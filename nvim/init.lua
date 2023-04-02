@@ -6,6 +6,7 @@
 vim.cmd('set background=dark')
 -- vim.cmd('set background=light')
 
+-- vim.cmd.colorscheme("typewriter")
 -- vim.cmd.colorscheme("oldbook8")
 -- vim.cmd.colorscheme("newsprint")
 -- vim.cmd.colorscheme("nofrils-light")
@@ -100,6 +101,12 @@ vim.keymap.set("n", "0", "^")
 vim.keymap.set("n", "^", "0")
 
 --
+-- COMMANDS
+--
+
+vim.cmd('command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor')
+
+--
 -- PLUGINS
 --
 
@@ -120,6 +127,8 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   -- use("nvim-treesitter/nvim-treesitter-context")
+
+  use 'pechorin/any-jump.vim'
 
   use { 'nvim-lualine/lualine.nvim', requires='kyazdani42/nvim-web-devicons' }
 
@@ -160,7 +169,7 @@ return require('packer').startup(function(use)
   use 'arzg/vim-oldbook8'
   use 'jaredgorski/Mies.vim'
   use 'robertmeta/nofrils'
-  use 'logico/typewriter'
+  use 'logico/typewriter-vim'
   use 'huyvohcmc/atlas.vim'
   use 'bruth/vim-newsprint-theme'
   use 'pbrisbin/vim-colors-off'
