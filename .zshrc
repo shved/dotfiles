@@ -4,13 +4,22 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="steeef"
+autoload -U colors; colors
+
+# ZSH_THEME="steeef"
+# export PROMPT=$' %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$ '
+# export PROMPT=$' %n${PR_RST}@%m${PR_RST}: %~${PR_RST} $vcs_info_msg_0_$ '
+
+ZSH_THEME="gallifrey"
 
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+PROMPT="%(!.%{$fg[red]%}.%{$fg[cyan]%})%m%{$reset_color%} %~ \$(git_prompt_info)%{$reset_color%}%B$%b "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}("
+ZSH_THEME_GIT_PROMPT_SUFFIX=") %{$reset_color%}"
 
 export ARCHFLAGS="-arch x86_64"
 
@@ -46,10 +55,5 @@ HISTCONTROL=ignoredups
 # F    Quit if output fits on a single screen.
 # L    Ignore LESSOPEN (some Linux distros set this to defaults)
 export LESS="iMXFL"
-
-# override steeef theme prompt
-autoload -U colors; colors
-# export PROMPT=$' %{$purple%}%n${PR_RST}@%{$orange%}%m${PR_RST}: %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$ '
-export PROMPT=$' %n${PR_RST}@%m${PR_RST}: %~${PR_RST} $vcs_info_msg_0_$ '
 
 alias lls="ls -lha --color=always -F --group-directories-first |awk '{k=0;s=0;for(i=0;i<=8;i++){;k+=((substr(\$1,i+2,1)~/[rwxst]/)*2^(8-i));};j=4;for(i=4;i<=10;i+=3){;s+=((substr(\$1,i,1)~/[stST]/)*j);j/=2;};if(k){;printf(\"%0o%0o \",s,k);};print;}'"
