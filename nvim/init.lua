@@ -3,19 +3,23 @@
 -- COLORS
 --
 
-vim.cmd('set background=dark')
--- vim.cmd('set background=light')
+-- vim.cmd('set background=dark')
+vim.cmd('set background=light')
 
--- vim.cmd.colorscheme("typewriter")
+-- vim.cmd.colorscheme("darcula")
+vim.cmd.colorscheme("hybrid_material") -- good light colorful
 -- vim.cmd.colorscheme("oldbook8")
+-- vim.cmd.colorscheme("typewriter") -- ok light monohrome low contrast
 -- vim.cmd.colorscheme("newsprint")
+-- vim.cmd.colorscheme("newspaper")
+-- vim.cmd.colorscheme("tango-morning")
+-- vim.cmd.colorscheme("subatomic256")
 -- vim.cmd.colorscheme("nofrils-light")
 -- vim.cmd.colorscheme("nofrils-dark")
 -- vim.cmd.colorscheme("atlas")
 -- vim.cmd.colorscheme("mies")
 -- vim.cmd.colorscheme("typewriter-night")
 -- vim.cmd.colorscheme("off")
-vim.cmd.colorscheme("darcula")
 
 --
 -- OPTIONS
@@ -157,6 +161,8 @@ return require('packer').startup(function(use)
     }
   }
 
+  use 'github/copilot.vim'
+
   use 'fatih/vim-go'
   use 'rust-lang/rust.vim'
 
@@ -173,4 +179,8 @@ return require('packer').startup(function(use)
   use 'huyvohcmc/atlas.vim'
   use 'bruth/vim-newsprint-theme'
   use 'pbrisbin/vim-colors-off'
+  use 'vim-scripts/newspaper.vim'
+  use 'vim-scripts/tango-morning.vim'
+  use 'd11wtq/subatomic256.vim'
+  use 'kristijanhusak/vim-hybrid-material'
 end)
