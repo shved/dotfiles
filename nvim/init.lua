@@ -6,8 +6,16 @@
 -- vim.cmd('set background=dark')
 vim.cmd('set background=light')
 
--- vim.cmd.colorscheme("darcula")
-vim.cmd.colorscheme("hybrid_material") -- good light colorful
+local handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme")
+local desktop_theme = handle:read('*a')
+handle:close()
+
+if string.match(desktop_theme, "dark") then
+  vim.cmd.colorscheme("darcula")
+else
+  vim.cmd.colorscheme("hybrid_material")
+end
+
 -- vim.cmd.colorscheme("oldbook8")
 -- vim.cmd.colorscheme("typewriter") -- ok light monohrome low contrast
 -- vim.cmd.colorscheme("newsprint")
