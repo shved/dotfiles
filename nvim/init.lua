@@ -3,31 +3,26 @@
 -- COLORS
 --
 
--- vim.cmd('set background=dark')
-vim.cmd('set background=light')
-
 local handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme")
 local desktop_theme = handle:read('*a')
 handle:close()
 
 if string.match(desktop_theme, "dark") then
+  vim.cmd('set background=dark')
   vim.cmd.colorscheme("darcula")
+  -- vim.cmd.colorscheme("off")
+  -- vim.cmd.colorscheme("nofrils-dark")
+  -- vim.cmd.colorscheme("oldbook8")
 else
+  vim.cmd('set background=light')
   vim.cmd.colorscheme("hybrid_material")
+  -- vim.cmd.colorscheme("newspaper")
+  -- vim.cmd.colorscheme("tango-morning")
+  -- vim.cmd.colorscheme("subatomic256")
+  -- vim.cmd.colorscheme("nofrils-light")
+  -- vim.cmd.colorscheme("typewriter")
+  -- vim.cmd.colorscheme("newsprint")
 end
-
--- vim.cmd.colorscheme("oldbook8")
--- vim.cmd.colorscheme("typewriter") -- ok light monohrome low contrast
--- vim.cmd.colorscheme("newsprint")
--- vim.cmd.colorscheme("newspaper")
--- vim.cmd.colorscheme("tango-morning")
--- vim.cmd.colorscheme("subatomic256")
--- vim.cmd.colorscheme("nofrils-light")
--- vim.cmd.colorscheme("nofrils-dark")
--- vim.cmd.colorscheme("atlas")
--- vim.cmd.colorscheme("mies")
--- vim.cmd.colorscheme("typewriter-night")
--- vim.cmd.colorscheme("off")
 
 --
 -- OPTIONS
@@ -144,7 +139,8 @@ return require('packer').startup(function(use)
 
   use { 'nvim-lualine/lualine.nvim', requires='kyazdani42/nvim-web-devicons' }
 
-  use { 'kdheepak/tabline.nvim', requires = { { 'hoob3rt/lualine.nvim' }, {'kyazdani42/nvim-web-devicons'} } }
+  use { 'nanozuki/tabby.nvim' }
+  -- use { 'kdheepak/tabline.nvim', requires = { { 'hoob3rt/lualine.nvim' }, {'kyazdani42/nvim-web-devicons'} } }
   -- use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
 
 
@@ -168,8 +164,6 @@ return require('packer').startup(function(use)
       {'hrsh7th/cmp-nvim-lua'},
     }
   }
-
-  use 'github/copilot.vim'
 
   use 'fatih/vim-go'
   use 'rust-lang/rust.vim'

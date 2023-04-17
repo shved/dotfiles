@@ -37,7 +37,7 @@ require("nvim-tree").setup({
       show = {
         file = false,
         folder = false,
-        -- git = false,
+        git = true,
       },
     },
     special_files = {},
