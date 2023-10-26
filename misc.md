@@ -201,7 +201,6 @@ Exponential    O(2 ^ N)
 Factorial      O(N!)  
 
 SQL
-
 a quick HTML report of your databases  
 `psql -c "\l+" -H -q postgres > out.html`
 
