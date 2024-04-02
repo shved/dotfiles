@@ -17,6 +17,7 @@
 * Writing An Interpreter In Go. Thorsten Ball
 * Business model generation Osterwalder & Pigneur
 * Kubernetes in action. Marko Luksa
+* Code Charles Petzold
 
 ### Great articles
 * https://blog.merovius.de/posts/2017-06-18-how-not-to-use-an-http-router/
