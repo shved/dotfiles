@@ -21,13 +21,6 @@ pip3 install neovim
 mkdir -p $HOME/.config
 cp -f nvim $HOME/.config/
 
-# === ZSH ===
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-chsh -s $(which zsh)
-
-cp -f .zshrc $HOME
-
 # === MISC ===
 cp -f ssh/config $HOME/.ssh
 

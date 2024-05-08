@@ -1,16 +1,4 @@
-# add to /etc/dnf/dnf.conf
-# fastestmirror=True
-# max_parallel_downloads=8
-# defaultyes=True
-
-# add rpmfusion repos
-
 sudo dnf install ripgrep clang cmake
-
-# === ZSH ===
-sudo dnf install zsh util-linux-user
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-chsh -s $(which zsh)
 
 # === GO ===
 curl -sSL https://git.io/g-install | sh -s
