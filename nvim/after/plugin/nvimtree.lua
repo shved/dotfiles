@@ -9,34 +9,33 @@
 
 require("nvim-tree").setup({
   view = {
-    -- width = 45,
-    -- side = "right",
     float = {
       enable = true,
       open_win_config = {
+        width = 45,
         relative = "cursor",
         border = "shadow",
       },
     },
-    mappings = {
-      list = {
-        { key = "x", action = "close_node", action_cb = close_node},
-        { key = "v", action = "vsplit", action_cb = vsplit },
-        { key = "i", action = "split", action_cb = split },
-        { key = "t", action = "tabnew", action_cb = tabnew },
-        { key = "S", action = "" },
-        { key = "I", action = "" },
-        { key = "H", action = "" },
-        { key = "B", action = "" },
-        { key = "U", action = "" },
-      },
-    },
+    -- mappings = {
+    --   list = {
+    --     { key = "x", action = "close_node", action_cb = close_node},
+    --     { key = "v", action = "vsplit", action_cb = vsplit },
+    --     { key = "i", action = "split", action_cb = split },
+    --     { key = "t", action = "tabnew", action_cb = tabnew },
+    --     { key = "S", action = "" },
+    --     { key = "I", action = "" },
+    --     { key = "H", action = "" },
+    --     { key = "B", action = "" },
+    --     { key = "U", action = "" },
+    --   },
+    -- },
   },
   renderer = {
     icons = {
       show = {
-        file = false,
-        folder = false,
+        -- file = false,
+        -- folder = false,
         git = true,
       },
     },
