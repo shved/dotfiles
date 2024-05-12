@@ -1,3 +1,6 @@
+# Disable alt-NUM nonsense key binding
+for i in "-" {0..9}; do bind -r "\e$i"; done
+
 alias ws="cd ~/workspace"
 alias ll="ls -lah"
 alias vim="nvim"
