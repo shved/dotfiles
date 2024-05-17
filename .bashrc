@@ -10,8 +10,8 @@ export LANG=en_US.UTF-8
 
 export GREP_COLORS='mt=1;33'
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=hx
+export VISUAL=hx
 
 # man 1 bash
 HISTCONTROL=ignoredups
