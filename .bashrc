@@ -40,4 +40,4 @@ fi
 
 # PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
 PROMPT_DIRTRIM=3
-PS1='\[\e[38;5;39m\]\u@\h\[\e[0m\] \[\e[38;5;220m\]\w\[\e[0m\]\[\e[38;5;208m\]$(__git_ps1 " %s")\[\e[0m\] \$ '
+PS1='\[\e[38;5;39m\]\u@\h\[\e[0m\] \[\e[38;5;220m\]\w\[\e[0m\]\[\e[38;5;208m\]$(__git_ps1 " [%s]")\[\e[0m\] \$ '
