@@ -1,4 +1,4 @@
-theme = "golden-rigma"
+theme = "modus_operandi"
 
 [editor]
 color-modes = true
@@ -13,3 +13,5 @@ insert = "underline"
 
 [editor.file-picker]
 hidden = false
+ignore = false
+git-ignore = false
