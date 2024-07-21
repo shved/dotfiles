@@ -52,10 +52,6 @@
 * https://ente.io/blog/tech/postgres-queue/
 * https://www.brianstorti.com/replication/
 
-### Cool Julia Evans cards
-* http://flashcards.wizardzines.com/
-* https://questions.wizardzines.com/
-
 ### Alghorytms and data structures to grokk
 - [x] Bloom filter
 - [x] Fourier transform
