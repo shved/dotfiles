@@ -1,4 +1,4 @@
-sudo dnf install ripgrep clang cmake
+sudo dnf install ripgrep clang cmake openssl-devel helix
 
 # === GO ===
 curl -sSL https://git.io/g-install | sh -s
@@ -12,12 +12,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup component add rust-analyzer
 rustup component add rustfmt
 
-# === NVIM ===
-sudo dnf install neovim python3-neovim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-nvim +PackerSync +GoInstallBinaries +q
+cargo install loc
+cargo install taplo-cli --locked
 
-# === RUBY ===
-cargo install frum
-eval "$(frum init)"
-frum install
