@@ -8,7 +8,7 @@
 > https://stackoverflow.com/a/140655
 
 ### Best books
-* High performance browser networking. Ilya Gorelik
+* High performance browser networking. Ilya Grigorik
 * Computer systems from programmers perspective
 * Grokking algorythms
 * Concurrency in go. Katherine Cox-Buday
