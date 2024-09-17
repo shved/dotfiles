@@ -1,6 +1,8 @@
 # Disable alt-NUM nonsense key binding
 for i in "-" {0..9}; do bind -r "\e$i"; done
 
+source /etc/profile.d/vte.sh
+
 alias ws="cd ~/workspace"
 alias ..="cd .."
 alias ll="ls -lah"
