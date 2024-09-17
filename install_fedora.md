@@ -1,4 +1,4 @@
-sudo dnf install ripgrep clang cmake openssl-devel helix
+sudo dnf install ripgrep clang cmake openssl-devel helix wl-clipboard openssl gnome-tweaks
 
 # === GO ===
 curl -sSL https://git.io/g-install | sh -s
