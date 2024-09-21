@@ -1,4 +1,7 @@
-theme = "modus_operandi"
+# theme = "modus_operandi"
+theme = "autumn"
+# theme = "darcula"
+# theme = "oldbook"
 
 [editor]
 color-modes = true
@@ -6,7 +9,7 @@ middle-click-paste = false
 bufferline = "always"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-absolute-path", "read-only-indicator", "file-modification-indicator"]
+left = ["mode", "spinner", "file-absolute-path", "read-only-indicator", "file-modification-indicator", "separator", "version-control"]
 
 [editor.cursor-shape]
 insert = "underline"
