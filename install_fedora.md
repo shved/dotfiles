@@ -14,5 +14,3 @@ rustup component add rustfmt
 
 cargo install loc
 cargo install taplo-cli --locked
-cargo install clippy
-
