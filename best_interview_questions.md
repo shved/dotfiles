@@ -7,3 +7,8 @@
 * How would you track a median of values stream.
   * Histogram approach.
   * binapprox https://www.stat.cmu.edu/~ryantibs/papers/median.pdf
+* You have a log file with entries, some log entries are duplicates. Remove those duplicates.
+  * Simple case when file is small.
+  * Large file.
+  * File that large that it does not fit into memory.
+  * Does not fit on one machine disk.
