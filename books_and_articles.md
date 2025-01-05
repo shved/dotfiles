@@ -52,3 +52,4 @@
 * https://ente.io/blog/tech/postgres-queue/
 * https://www.brianstorti.com/replication/
 * https://lucapette.me/writing/writing-integration-tests-for-a-go-cli-application/
+* https://ibraheem.ca/posts/designing-papaya/
