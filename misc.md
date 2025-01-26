@@ -2,6 +2,7 @@
 - [x] Bloom filter
 - [x] Fourier transform
 - [x] Hyperlog
+- [x] Huffman trees
 - [ ] Count–min sketch
 - [ ] Reservoir sampling
 - [ ] Linear programming и Simplex algorithm
