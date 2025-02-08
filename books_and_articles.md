@@ -19,6 +19,7 @@
 * Kubernetes in action. Marko Luksa
 * Code Charles Petzold
 * Asynchronous Programming in Rust. Carl Fredrik Samson
+* Rust Atomics and Locks. Mara Bos
 
 ### Great articles
 * https://blog.merovius.de/posts/2017-06-18-how-not-to-use-an-http-router/
