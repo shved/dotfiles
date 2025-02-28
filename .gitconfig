@@ -1,12 +1,23 @@
 [user]
-email = vitaly.shvedchenko@gmail.com
-name = Vitalii Shvedchenko
-
+	email = vitaly.shvedchenko@gmail.com
+	name = Vitalii Shvedchenko
 [color]
-ui = true
-
+	ui = true
 [pull]
-rebase = false
-
+	rebase = false
 [init]
-defaultBranch = main
+	defaultBranch = main
+[diff]
+	algorithm = histogram
+	renames = true
+[tag]
+	sort = version:refname
+[branch]
+	sort = -committerdate
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[rerere]
+	enabled = true
+	autoupdate = true
