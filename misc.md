@@ -3,7 +3,7 @@
 - [x] Fourier transform
 - [x] Hyperlog
 - [x] Huffman trees
-- [ ] Count–min sketch
+- [x] Count–min sketch
 - [ ] Reservoir sampling
 - [ ] Linear programming и Simplex algorithm
 - [ ] Diffie-Hellman
