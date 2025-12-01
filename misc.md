@@ -4,6 +4,7 @@
 - [x] Hyperlog
 - [x] Huffman trees
 - [x] Count–min sketch
+- [x] Boyer-Moore search
 - [ ] Reservoir sampling
 - [ ] Linear programming и Simplex algorithm
 - [ ] Diffie-Hellman
