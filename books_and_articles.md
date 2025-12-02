@@ -9,27 +9,25 @@
 
 ### Best books
 * High performance browser networking. Ilya Grigorik
-* Computer systems from programmers perspective
-* Grokking algorythms
+* Computer systems from programmers perspective. Randal Bryant and David O'Hallaron
+* Grokking algorythms. Aditya Bhargava
 * Concurrency in go. Katherine Cox-Buday
 * The Imposter's Handbook. Rob conery
-* Linux programming interface
+* The Linux Programming Interface: A Linux and UNIX System Programming Handbook. Michael Kerrisk
 * Writing An Interpreter In Go. Thorsten Ball
-* Business model generation Osterwalder & Pigneur
+* Business model generation. Osterwalder & Pigneur
 * Kubernetes in action. Marko Luksa
-* Code Charles Petzold
+* Code: The Hidden Language of Computer Hardware and Software. Charles Petzold
 * Asynchronous Programming in Rust. Carl Fredrik Samson
 * Rust Atomics and Locks. Mara Bos
 * Learning Deep Learning. Magnus Ekman
 
 ### Great articles
 * https://blog.merovius.de/posts/2017-06-18-how-not-to-use-an-http-router/
-* https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html
 * https://erthalion.info/2019/12/06/postgresql-stay-curious/
 * https://www.honeybadger.io/blog/the-rubyist-guide-to-unicode-utf8
 * https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/
 * https://blog.carlmjohnson.net/post/2020/go-cli-how-to-and-advice/
-* https://www.alchemists.io/articles/ruby_antipatterns/
 * https://steveklabnik.com/writing/nobody-understands-rest-or-http
 * https://steveklabnik.com/writing/some-people-understand-rest-and-http
 
